@@ -32,17 +32,11 @@ public class ExampleExpectedConditionsTest {
         section.click();
 
         final By linkToClick = By.cssSelector("a#aboutlink");
-//        new WebDriverWait(driver, 10).
-//                until(ExpectedConditions.visibilityOfElementLocated(linkToClick));
-//
-//        new WebDriverWait(driver, 10).
-//                until(ExpectedConditions.presenceOfElementLocated(linkToClick));
 
         new WebDriverWait(driver, 10).
                 until(ExpectedConditions.elementToBeClickable(linkToClick));
 
         final WebElement aboutLink = driver.findElement(linkToClick);
-        // depending on the wait used, this line will pass or fail
         aboutLink.click();
 
 

@@ -34,12 +34,8 @@ public class CustomExpectedConditionsTest {
         section.click();
 
         final By linkToClick = By.cssSelector("a#aboutlink");
-//        new WebDriverWait(driver, 10).
-//                until(ExpectedConditions.elementToBeClickable(linkToClick));
 
         By expandingElement = By.cssSelector("section.condense");
-//        new WebDriverWait(driver, 10).
-//                until(new ElementHasExpandedFully(expandingElement));
 
         new WebDriverWait(driver, 10).
                 until(MyExpectedConditions.elementHasExpandedFully(expandingElement));
